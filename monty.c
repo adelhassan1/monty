@@ -1,5 +1,5 @@
 #include "monty.h"
-
+int sq_flag = 0;
 
 /**
  * main - main function to execute monty program.
