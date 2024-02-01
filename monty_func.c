@@ -1,4 +1,6 @@
+#define _GNU_SOURCE
 #include "monty.h"
+
 
 /**
  * read_file - function that reads the file and runs commands.
