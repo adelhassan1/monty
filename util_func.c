@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * error_exit = freeing the stack and exiting with failure.
+ * error_exit - freeing the stack and exiting with failure.
  *
  * @stack: pointer to header.
  *
