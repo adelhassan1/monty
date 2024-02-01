@@ -1,5 +1,4 @@
 #include "monty.h"
-
 int sq_flag = 0;
 
 /**

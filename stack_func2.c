@@ -64,7 +64,7 @@ void _pstr(stack_t **stack, __attribute__ ((unused))unsigned int line_number)
 			break;
 		if (!isprint(val))
 			break;
-		
+
 		putchar(val);
 		runner = runner->next;
 	}
@@ -78,7 +78,7 @@ void _pstr(stack_t **stack, __attribute__ ((unused))unsigned int line_number)
  * @line_number: line opcode occurs on
  */
 
-void _stack(__attribute__ ((unused))stack_t **stack, 
+void _stack(__attribute__ ((unused))stack_t **stack,
 		__attribute__ ((unused))unsigned int line_number)
 {
 	sq_flag = 0;
