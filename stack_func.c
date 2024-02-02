@@ -14,7 +14,7 @@ void _push(stack_t **stack, unsigned int line_number)
 	new = malloc(sizeof(stack_t));
 	if (!new)
 	{
-		printf("Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		error_exit(stack);
 	}
 
@@ -25,7 +25,7 @@ void _push(stack_t **stack, unsigned int line_number)
 	}
 	else
 	{
-		printf("L%d: usage: push integer\n", line_number);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		error_exit(stack);
 	}
 
@@ -38,14 +38,13 @@ void _push(stack_t **stack, unsigned int line_number)
 	{
 		add_dnodeint(stack, push_arg);
 	}
-
 }
 /**
  * _pall - print all function
  * @stack: pointer to linked list stack
  * @line_number: number of line opcode occurs on
  */
-void _pall(stack_t **stack, __attribute__ ((unused))unsigned int line_number)
+void _pall(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
 	stack_t *runner;
 
@@ -69,7 +68,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 	runner = *stack;
 	if (runner == NULL)
 	{
-		printf("L%d: can't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		error_exit(stack);
 	}
 	printf("%d\n", runner->n);
@@ -88,7 +87,7 @@ void _swap(stack_t **stack, unsigned int line_number)
 	runner = *stack;
 	if (runner == NULL || runner->next == NULL)
 	{
-		printf("L%d: can't swap, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		error_exit(stack);
 	}
 	tmp = runner->n;
@@ -104,7 +103,7 @@ void _pop(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{
-		printf("L%d: can't pop an empty stack\n", line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		error_exit(stack);
 	}
 	delete_dnodeint_at_index(stack, 0);
