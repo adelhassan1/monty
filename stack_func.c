@@ -31,11 +31,13 @@ void _push(stack_t **stack, unsigned int line_number)
 
 	if (sq_flag == 1)
 	{
+		free(new);
 		add_dnodeint_end(stack, push_arg);
 	}
 
 	if (sq_flag == 0)
 	{
+		free(new);
 		add_dnodeint(stack, push_arg);
 	}
 }
